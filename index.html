@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <!-- my style -->
      <link rel="stylesheet" href="css/style.css">
     
@@ -16,12 +19,16 @@
     <main>
         <div id="container">
             <h1>{{title}}</h1>
-            <input type="text" name="item" id="item" placeholder="inserisci ">
+            <input type="text" name="item" id="item" placeholder="inserisci task ">
             <button>aggiungi</button>
 
-            <div class="">
+            <div class="back">
                 <ul>
-                    <li v-for="item in items">{{item}}</li>
+                    <li
+                        v-for="item in items">{{item}}
+                        <i class="fa-regular fa-circle-xmark"></i>
+
+                    </li>
                 </ul>
 
             </div>
