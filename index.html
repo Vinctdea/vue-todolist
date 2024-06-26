@@ -27,11 +27,20 @@
 
             <div class="back">
                 <ul v-if="items.length > 0">
-                    <li :key="index"
-                        v-for="(item, index) in items">{{item.text}}
-                        <i class="fa-regular fa-circle-xmark" @click="removeTask(index)"></i>
 
+                    <li @click="checkClick"  v-for="(item, index) in items" :key="index">
+                        <s>
+                            {{item.text}}
+                        </s>
+                        <i class="fa-regular fa-circle-xmark" @click="removeTask(index)"></i>
                     </li>
+
+                    <!-- <li v-else v-for="(item, index) in items" :key="index">
+                        {{item.text}}
+                        <i class="fa-regular fa-circle-xmark" @click="removeTask(index)"></i>
+                    </li> -->
+                    
+                    
                 </ul>
                 <h2 v-else>la lista è vuota</h2>
 

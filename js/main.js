@@ -6,7 +6,7 @@
       return {
             title:"to do list",
             newTask:"",
-            error:false,
+            error: false,
             items:[
                 {
                     text:"fare la spesa",
@@ -36,6 +36,8 @@
                 this.items.unshift({text:this.newTask,done:"false"});
                 this.newTask = "";
                 this.error = false;
+                // console.log(this.items);
+                
             }else{
                 this.error = true;
             }
@@ -43,6 +45,14 @@
         },
         removeTask(indice){
             this.items.splice(indice,1);
-        }           
+        },
+        checkClick(){
+            if(this.item.done === false){
+                this.items.done = true;
+            }else{
+                this.items.done = false;
+
+            }
+        }         
     }
 }).mount('#container')
