@@ -19,14 +19,14 @@
     <main>
         <div id="container">
             <h1>{{title}}</h1>
-            <input type="text" name="item" id="item" placeholder="inserisci task ">
-            <button>aggiungi</button>
+            <input type="text" name="item" id="item" placeholder="inserisci task " v-model="newTask" @keyup.enter="addTask">
+            <button @click="addTask">aggiungi</button>
 
             <div class="back">
                 <ul>
-                    <li
-                        v-for="item in items">{{item.text}}
-                        <i class="fa-regular fa-circle-xmark"></i>
+                    <li :key="index"
+                        v-for="(item, index) in items">{{item.text}}
+                        <i class="fa-regular fa-circle-xmark" @click="removeTask(index)"></i>
 
                     </li>
                 </ul>

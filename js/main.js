@@ -5,6 +5,7 @@
     data() {
       return {
             title:"to do list",
+            newTask:"",
             items:[
                 {
                     text:"fare la spesa",
@@ -26,5 +27,15 @@
             ]
             
         }
+        
+    },
+    methods:{   //aggiungere tasks
+        addTask(){
+            this.items.unshift({text:this.newTask,done:"false"});
+            this.newTask = "";
+        },
+        removeTask(indice){
+            this.items.splice(indice,1);
+        }           
     }
 }).mount('#container')
