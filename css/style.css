@@ -6,3 +6,44 @@
 }
 
 /* **************************REGOLE MAIN******************** */
+#container{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 30px;
+    margin-top: 50px;
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(92, 199, 241);
+    /* debug */
+   
+    min-height: 500px;
+
+}
+
+#container h1{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+#item{
+    font-size: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+}
+
+#item:focus{
+    border: 4px solid rgb(229, 85, 229);
+}
+
+button{
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    font-size: 30px;
+}
