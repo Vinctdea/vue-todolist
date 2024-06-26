@@ -21,6 +21,9 @@
             <h1>{{title}}</h1>
             <input type="text" name="item" id="item" placeholder="inserisci task " v-model="newTask" @keyup.enter="addTask">
             <button @click="addTask">aggiungi</button>
+            <div id="error" v-if="error">
+                devi inserire almeno 5 caratteri
+            </div>
 
             <div class="back">
                 <ul>

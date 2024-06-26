@@ -6,6 +6,7 @@
       return {
             title:"to do list",
             newTask:"",
+            error:false,
             items:[
                 {
                     text:"fare la spesa",
@@ -31,8 +32,14 @@
     },
     methods:{   //aggiungere tasks
         addTask(){
-            this.items.unshift({text:this.newTask,done:"false"});
-            this.newTask = "";
+            if(this.newTask.length >= 5){
+                this.items.unshift({text:this.newTask,done:"false"});
+                this.newTask = "";
+                this.error = false;
+            }else{
+                this.error = true;
+            }
+           
         },
         removeTask(indice){
             this.items.splice(indice,1);
